@@ -53,7 +53,6 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     
-
     .horizontal-slider {
         max-width: 100%;
         height: 38px;
@@ -121,7 +120,6 @@ export const GlobalStyle = createGlobalStyle`
         left: 16px;
         width: 8px;
     }    
-
 
     .react-toggle {
         touch-action: pan-x;
@@ -484,21 +482,19 @@ export const Alert = styled(AlertSrc)`
 
 export const Form = styled.form` 
     label {
-        /*
         display: inline-block;
-        in-width: 250px;
-        ax-width: 250px;
+        min-width: 250px;
+        max-width: 250px;
         padding-right:1em;
-        */
     }
 
     input[type=number],
     input[type=checkbox],
     input[type=text] {
-        /*width:450px;
+        width:450px;
         max-width:100%;
         box-sizing: border-box;
-        padding:0.3em;*/
+        padding:0.3em;
     }
 
     input[type=checkbox] {
