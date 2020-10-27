@@ -38,6 +38,8 @@
     "prop-types": "^15.7.2",
     "react-feather": "^2.0.4",
     "react-router-dom": "^5.1.2",
+    "react-slider": "^1.0.8",
+    "react-toggle": "^4.1.1",
     "styled-components": "^5.1.0",
     "styled-normalize": "^8.0.7"
   }

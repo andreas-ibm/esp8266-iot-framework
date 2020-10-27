@@ -10,9 +10,15 @@
 WifiManager WiFiManager;
 
 //function to call in setup
-void WifiManager::begin(char const *apName)
+void WifiManager::begin(
+    char const *apName,
+    char const *hostName)
 {    
     captivePortalName = apName;
+
+    if (hostName != NULL) {
+        this->hostName = hostName;
+    }
 
     WiFi.mode(WIFI_STA);
 
@@ -147,6 +153,25 @@ bool WifiManager::isCaptivePortal()
 String WifiManager::SSID()
 {    
     return WiFi.SSID();
+}
+
+String WifiManager::getHostName()
+{    
+#ifdef ESP32
+    return WiFi.getHostname();
+#elif defined(ESP8266)
+    return WiFi.hostname();
+#endif            
+}
+
+String WifiManager::getIPAddress()
+{    
+    return WiFi.localIP().toString();
+}
+
+String WifiManager::getMacAddress()
+{    
+    return WiFi.macAddress();
 }
 
 //captive portal loop
